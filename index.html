@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Basis Data</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Segoe UI", sans-serif;
+      display: flex;
+      background: #f0f2f5;
+      color: #333;
+    }
+    /* Sidebar */
+    aside {
+      width: 220px;
+      background: #1a237e;
+      color: white;
+      min-height: 100vh;
+      padding: 20px;
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+    aside h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    aside nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 5px;
+    }
+    aside nav a:hover {
+      background: #3949ab;
+    }
+    .btn-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+      background: #00c853;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    /* Main content */
+    main {
+      margin-left: 240px;
+      padding: 20px;
+      flex: 1;
+    }
+    header {
+      background: #2196f3;
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    article {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    article h2 {
+      margin-bottom: 10px;
+      color: #1a237e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside>
+    <h2>Blog Basis Data</h2>
+    <nav>
+      <a href="#post1">Harapan</a>
+      <a href="#post2">Basis Data</a>
+      <a href="#post3">Conceptual DB</a>
+      <a href="#post4">Physical Model</a>
+    </nav>
+    <a href="https://www.ubpkarawang.ac.id" target="_blank" class="btn-link">UBP Karawang</a>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <header>
+      <h1>Catatan Belajar Basis Data</h1>
+      
+    </header>
+
+    <article id="post1">
+      <h2>Harapan Saya dari Kuliah Basis Data</h2>
+      <p>Kalau ngomong jujur, saya pengen banget ngerti cara kerja database. 
+         Soalnya sekarang hampir semua aplikasi pasti butuh tempat nyimpen data. 
+         Harapan saya, dari mata kuliah ini saya bisa ngerti dari nol: mulai dari 
+         bikin desain database, belajar ERD, sampai nulis query SQL dengan lancar. 
+         Pokoknya, pengennya ilmu ini bisa jadi bekal buat kerja nanti.</p>
+    </article>
+
+    <article id="post2">
+      <h2>Apa Itu Basis Data?</h2>
+      <p>Basis data itu sebenarnya kayak lemari arsip digital. Bedanya, kalau arsip manual 
+         susah dicari, kalau database tinggal klik langsung ketemu. Contoh paling gampang 
+         ada di aplikasi sehari-hari: Instagram, Tokopedia, atau sistem kampus. 
+         Semuanya jalan karena ada database yang nyimpen data pengguna, transaksi, dan lainnya.</p>
+    </article>
+
+    <article id="post3">
+      <h2>Conceptual Database</h2>
+      <p>Sebelum bikin database di komputer, kita butuh gambaran besarnya dulu. 
+         Itulah yang disebut <i>Conceptual Database</i>. Biasanya digambarkan pakai ERD 
+         (Entity Relationship Diagram). Misalnya di kampus ada entitas Mahasiswa, Dosen, dan Mata Kuliah. 
+         Hubungannya bisa “Mahasiswa mengambil Mata Kuliah” atau “Dosen mengajar Mata Kuliah”. 
+         Dengan model ini, kita lebih gampang paham alur data sebelum masuk tahap teknis.</p>
+    </article>
+
+    <article id="post4">
+      <h2>Physical Model</h2>
+      <p>Setelah konsepnya jelas, barulah dibuat versi nyata di DBMS. 
+         Nah, inilah yang disebut <i>Physical Model</i>. 
+         Semua entitas tadi diubah jadi tabel lengkap dengan kolom, tipe data, 
+         serta aturan kayak primary key dan foreign key. 
+         Contoh: tabel Mahasiswa berisi NIM, Nama, dan Alamat. 
+         Dari sinilah database bisa dipakai beneran di aplikasi.</p>
+    </article>
+
+  </main>
+
+</body>
+</html>
