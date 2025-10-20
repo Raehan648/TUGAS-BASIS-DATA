@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Normalisasi pada ERD</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f0f3f6;
+      color: #333;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(90deg, #004080, #0074d9);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    header p {
+      font-size: 16px;
+      letter-spacing: 0.5px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px 50px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #004080;
+      margin-top: 25px;
+      margin-bottom: 8px;
+      border-left: 5px solid #004080;
+      padding-left: 10px;
+    }
+    p { text-align: justify; margin-top: 10px; }
+    ul {
+      margin-left: 25px;
+      margin-top: 10px;
+    }
+    li { margin-bottom: 6px; }
+    .btn-group {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #007bff;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 6px;
+      margin: 8px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #0056b3; }
+    .btn-green { background: #28a745; }
+    .btn-green:hover { background: #1f7e34; }
+    footer {
+      text-align: center;
+      background: #002b55;
+      color: white;
+      padding: 18px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Normalisasi pada ERD</h1>
+  </header>
+
+  <div class="container">
+    <h2>1. Apa Itu Normalisasi?</h2>
+    <p>
+      <b>Normalisasi</b> adalah proses pengorganisasian data dalam basis data agar terhindar dari duplikasi 
+      dan menjaga konsistensi data. Dalam konteks <b>Entity Relationship Diagram (ERD)</b>, 
+      normalisasi dilakukan setelah kita menentukan entitas, atribut, dan relasi — 
+      tujuannya untuk memastikan setiap tabel tersusun secara efisien.
+    </p>
+
+    <h2>2. Mengapa Normalisasi Penting?</h2>
+    <p>Beberapa alasan kenapa normalisasi penting dilakukan dalam perancangan basis data:</p>
+    <ul>
+      <li>Mengurangi redundansi atau pengulangan data.</li>
+      <li>Menjaga integritas data agar tetap konsisten di seluruh tabel.</li>
+      <li>Mempermudah pemeliharaan dan pembaruan data.</li>
+      <li>Meningkatkan efisiensi penyimpanan dan performa basis data.</li>
+    </ul>
+
+    <h2>3. Bentuk Normalisasi yang Umum Digunakan</h2>
+    <p>
+      Normalisasi terdiri dari beberapa bentuk (Normal Form). Bentuk yang paling umum digunakan adalah hingga <b>3NF (Third Normal Form)</b>.
+    </p>
+    <ul>
+      <li><b>1NF (First Normal Form):</b> Setiap kolom berisi nilai tunggal (atomik), bukan kumpulan data.</li>
+      <li><b>2NF (Second Normal Form):</b> Sudah memenuhi 1NF, dan setiap atribut bukan kunci bergantung penuh pada kunci utama.</li>
+      <li><b>3NF (Third Normal Form):</b> Sudah memenuhi 2NF, serta tidak memiliki ketergantungan transitif antar atribut bukan kunci.</li>
+    </ul>
+
+    <h2>4. Contoh Sederhana Proses Normalisasi</h2>
+    <p>
+      Misalnya terdapat tabel <b>Mahasiswa</b> dengan data berikut:
+    </p>
+    <ul>
+      <li>NIM, Nama, Kode_MK, Nama_MK, Dosen</li>
+    </ul>
+    <p>
+      Dari tabel tersebut, terdapat pengulangan data jika satu mahasiswa mengambil banyak mata kuliah.
+      Setelah dinormalisasi, tabel dipecah menjadi:
+    </p>
+    <ul>
+      <li><b>Mahasiswa</b> (NIM, Nama)</li>
+      <li><b>MataKuliah</b> (Kode_MK, Nama_MK, Dosen)</li>
+      <li><b>KRS</b> (NIM, Kode_MK)</li>
+    </ul>
+    <p>
+      Dengan begitu, data mahasiswa, mata kuliah, dan pengambilan mata kuliah tersimpan secara terpisah tanpa duplikasi.
+    </p>
+
+    <div class="btn-group">
+      <a href="https://youtu.be/JTnNIuc8t4w" target="_blank" class="btn">🎥 Tonton Penjelasan Video</a>
+      <a href="https://www.ubpkarawang.ac.id" target="_blank" class="btn btn-green">🌐 Kunjungi UBP Karawang</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 | Blog Basis Data oleh Raehan Khoeron Saepudin - Universitas Buana Perjuangan Karawang
+  </footer>
+
+</body>
+</html>
